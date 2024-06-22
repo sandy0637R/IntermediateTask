@@ -1,11 +1,20 @@
+:root{
+    --primary: blueviolet;
+    --secondary: white;
+    --third: purple;
+    --fourth: black;
+    --fifth: rgba(204, 161, 202, 0.5);
+}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     list-style: none;
 }
 
+.container{
+    margin-top: 50px;
+}
 
 /* Login  */
 
@@ -15,7 +24,7 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: rgb(247, 226, 226);
+    background-color: var(--fifth);
 }
 
 .login-form{
@@ -24,10 +33,11 @@
     width: 500px;
     height: 500px;
     align-items: center;
-    background-color: white;
-    color: blueviolet;
+    background-color: var(--secondary);
+    color: var(--primary);
     border-radius: 20px;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px var(--fourth);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .login-form:hover{
@@ -53,28 +63,28 @@ form h1{
     width: 300px;
     border-radius: 5px;
     border: 0;
-    box-shadow: 0px 0px 1.5px black;
+    box-shadow: 0px 0px 1.5px var(--fourth);
     margin-left: 3px;
     font-size: 20px;
-    color: blueviolet;
+    color: var(--primary);
 }
 
 .button{
     padding: 15px 60px;
     font-size: 14px;
     font-weight: 600;
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--primary);
+    color: var(--secondary);
     border: 0;
     border-radius: 5px;
     margin-top: 60px;
 }
 
 .button:hover{
-    border: 5px solid blueviolet;
+    border: 5px solid var(--primary);
     border-radius: 10px;
-    color: blueviolet;
-    background-color: white;
+    color: var(--primary);
+    background-color: var(--secondary);
     box-shadow: 0px 0px 10px;
     font-weight: 800;
     font-size: 17px;
@@ -90,11 +100,15 @@ form h1{
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--secondary);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(173, 142, 202);
+    color: var(--fifth);
     border-radius: 5px;
-    box-shadow:  0px 0px 5px black;
+    box-shadow:  0px 0px 5px var(--fourth);
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
 }
  
 .navbar-head{
@@ -102,7 +116,7 @@ form h1{
 }
 
 .navbar-head h1 span{
-    color: blueviolet;
+    color: var(--primary);
 }
 
 .navbar-menu ul{
@@ -117,12 +131,12 @@ form h1{
 }
 
 .navbar-menu ul li:hover{
-    box-shadow: 0px 0px 10px ;
+    box-shadow: 0px 0px 10px var(--fourth);
 }
 
 
 .navbar-menu ul li a{
-    color: rgb(6, 6, 6);
+    color: var(--fourth);
     text-decoration: none;
 }
 
@@ -133,14 +147,14 @@ form h1{
 
 
 /* Main Section  */
-
 main{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(253, 252, 254);
+    background-color: var(--secondary);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .main-sec{
@@ -151,27 +165,27 @@ main{
     justify-content: center;
     align-items: center;
     padding: 100px;
-    background-color: rgba(204, 161, 202, 0.5);
-    box-shadow: 0px 0px 10px black;
+    background-color: var(--fifth);
+    box-shadow: 0px 0px 10px var(--fourth);
     border-radius: 50px;
 }
 
 .main-content{
     padding: 50px;
     line-height: 1.5em;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px var(--fourth);
     margin-right: 80px;
     border-radius: 50px;
-    background-color: rgb(250, 249, 251);
+    background-color: var(--secondary);
 }
 
 .main-content p{
     font-size: 20px;
-    color: blueviolet;
+    color: var(--primary);
 }
 
 .main-content h1{
-    color: rgb(75, 7, 138);
+    color: var(--third);
    font-size: 3em;
    margin: 20px 0px;    
 }
@@ -180,7 +194,7 @@ main{
     height: 500px;
     width: 500px;
     border-radius: 50px;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px var(--fourth);
 }
 /* Main Section  */
 
@@ -188,11 +202,12 @@ main{
 /* Main Form  */
 
 .main-form-back{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 30vh;
-    background-color: rgb(251, 250, 252);
+    background-color: var(--secondary);
     width: 100%;
 }
 
@@ -200,20 +215,32 @@ main{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
+    background-color: var(--secondary);
     border-radius: 50px;
     height: 20vh;
     width: 80%;
-    box-shadow: 0px 0px 10px rgb(6, 6, 6);
+    box-shadow: 0px 0px 10px var(--fourth);
 }
 
-.main-button{
-    padding: 15px 60px;
-    font-size: 14px;
+.main-button,input[type="submit"]{
+    padding: 20px 60px;
+    font-size: 18px;
     font-weight: 600;
-    background-color: blueviolet;
-    color: white;
+    background-color: var(--primary);
+    color: var(--secondary);
     border: 0;
     border-radius: 5px;
 }
+
+.main-button,input[type="submit"]:hover{
+    border: 5px solid var(--primary);
+    border-radius: 10px;
+    color: var(--primary);
+    background-color: var(--secondary);
+    box-shadow: 0px 0px 10px;
+    font-weight: 800;
+    font-size: 17px;
+    transform: scale(0.9);
+}
+
 /* Main Form End  */
